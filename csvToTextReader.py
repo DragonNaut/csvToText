@@ -9,8 +9,9 @@ def main():
     
     outFile = open(outputFileName, 'a')
 
-    print("Connecting to CSV file file.")
-    
+    print("Connecting to CSV file.")
+
+    # csv libary function
     with open(inputCsvFileName, newline='') as csvFile:
         spamreader = csv.reader(csvFile, delimiter=' ', quotechar='|')
         
@@ -21,5 +22,7 @@ def main():
     print("Closing files")
     csvFile.close()
     outFile.close()
+
+    myVar = input("Press enter to exit.")
 
 main()
